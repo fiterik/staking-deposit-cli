@@ -1,7 +1,8 @@
 VENV_NAME?=venv
 VENV_ACTIVATE=. $(VENV_NAME)/bin/activate
 PYTHON=${VENV_NAME}/bin/python3.12
-DOCKER_IMAGE="itxchain/staking-deposit-cli:latest"
+VERSION=v1.0.0
+DOCKER_IMAGE="0x6572696b/staking-deposit-cli"
 
 help:
 	@echo "clean - remove build and Python file artifacts"
@@ -53,8 +54,12 @@ build_linux: venv_build
 	export PYTHONHASHSEED=42; \
 	$(VENV_ACTIVATE) && pyinstaller ./build_configs/linux/build.spec
 
-build_docker:
-	@docker build --pull -t $(DOCKER_IMAGE) .
+build-docker:
+	@docker build --pull -t $(DOCKER_IMAGE):latest -t $(DOCKER_IMAGE):$(VERSION) .
 
-run_docker:
-	@docker run -it --rm $(DOCKER_IMAGE) $(filter-out $@,$(MAKECMDGOALS))
+run-docker:
+	@docker run -it --rm $(DOCKER_IMAGE):$(VERSION) $(filter-out $@,$(MAKECMDGOALS))
+
+push-docker:
+	@docker push $(DOCKER_IMAGE):latest
+	@docker push $(DOCKER_IMAGE):$(VERSION)
