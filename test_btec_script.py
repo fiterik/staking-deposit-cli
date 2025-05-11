@@ -29,7 +29,7 @@ async def main():
         '--non_interactive',
         'generate-bls-to-execution-change',
         '--bls_to_execution_changes_folder', my_folder_path,
-        '--chain', 'mainnet',
+        '--chain', 'itxtestnet',
         '--mnemonic', '\"sister protect peanut hill ready work profit fit wish want small inflict flip member tail between sick setup bright duck morning sell paper worry\"',
         '--bls_withdrawal_credentials_list', '0x00bd0b5a34de5fb17df08410b5e615dda87caf4fb72d0aac91ce5e52fc6aa8de',
         '--validator_start_index', '0',

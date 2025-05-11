@@ -149,7 +149,7 @@ You can use `new-mnemonic --help` to see all arguments. Note that if there are m
 | `--num_validators`  | Non-negative integer | The number of signing keys you want to generate. Note that the child key(s) are generated via the same master key. |
 | `--mnemonic_language` | String. Options: `简体中文`, `繁體中文`, `český jazyk`, `English`, `Italiano`, `한국어`, `Português`, `Español`. Default to `English` | The language of the mnemonic word list |
 | `--folder` | String. Pointing to `./validator_keys` by default | The folder path for the keystore(s) and deposit(s) |
-| `--chain` | String. `mainnet` by default | The chain setting for the signing domain. |
+| `--chain` | String. `itxtestnet` by default | The chain setting for the signing domain. |
 | `--execution_address` (or `--eth1_withdrawal_address`) | String. Eth1 address in hexadecimal encoded form | If this field is set and valid, the given Eth1 address will be used to create the withdrawal credentials. Otherwise, it will generate withdrawal credentials with the mnemonic-derived withdrawal public key in [ERC-2334 format](https://eips.ethereum.org/EIPS/eip-2334#eth2-specific-parameters). |
 
 ###### `existing-mnemonic` Arguments
@@ -161,7 +161,7 @@ You can use `existing-mnemonic --help` to see all arguments. Note that if there 
 | `--validator_start_index` | Non-negative integer | The index of the first validator's keys you wish to generate. If this is your first time generating keys with this mnemonic, use 0. If you have generated keys using this mnemonic before, use the next index from which you want to start generating keys from (eg, if you've generated 4 keys before (keys #0, #1, #2, #3), then enter 4 here.|
 | `--num_validators`  | Non-negative integer | The number of new signing keys you want to generate. Note that the child key(s) are generated via the same master key. |
 | `--folder` | String. Pointing to `./validator_keys` by default | The folder path for the keystore(s) and deposit(s) |
-| `--chain` | String. `mainnet` by default | The chain setting for the signing domain. |
+| `--chain` | String. `itxtestnet` by default | The chain setting for the signing domain. |
 | `--execution_address` (or `--eth1_withdrawal_address`) | String. Eth1 address in hexadecimal encoded form | If this field is set and valid, the given Eth1 address will be used to create the withdrawal credentials. Otherwise, it will generate withdrawal credentials with the mnemonic-derived withdrawal public key in [ERC-2334 format](https://eips.ethereum.org/EIPS/eip-2334#eth2-specific-parameters). |
 
 ###### Successful message
@@ -186,7 +186,7 @@ You can use `bls-to-execution-change --help` to see all arguments. Note that if 
 | Argument | Type | Description |
 | -------- | -------- | -------- |
 | `--bls_to_execution_changes_folder` | String. Pointing to `./bls_to_execution_changes` by default | The folder path for the `bls_to_execution_change-*` JSON file(s) |
-| `--chain` | String. `mainnet` by default | The chain setting for the signing domain. |
+| `--chain` | String. `itxtestnet` by default | The chain setting for the signing domain. |
 | `--mnemonic` | String. mnemonic split by space.  | The mnemonic you used to create withdrawal credentials. |
 | `--mnemonic_password` | Optional string. Empty by default. | The mnemonic password you used in your key generation. Note: It's not the keystore password. |
 | `--validator_start_index` | Non-negative integer | The index position for the keys to start generating withdrawal credentials in [ERC-2334 format](https://eips.ethereum.org/EIPS/eip-2334#eth2-specific-parameters). |

@@ -35,7 +35,7 @@ from staking_deposit.utils.intl import (
 )
 from staking_deposit.settings import (
     ALL_CHAINS,
-    MAINNET,
+    ITXTESTNET,
     get_chain_setting,
     get_devnet_chain_setting,
 )
@@ -68,7 +68,7 @@ FUNC_NAME = 'generate_bls_to_execution_change'
             list(ALL_CHAINS.keys())
         ),
     ),
-    default=MAINNET,
+    default=ITXTESTNET,
     help=lambda: load_text(['arg_chain', 'help'], func=FUNC_NAME),
     param_decls='--chain',
     prompt=choice_prompt_func(

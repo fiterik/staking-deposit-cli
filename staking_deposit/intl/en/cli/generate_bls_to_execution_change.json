@@ -23,8 +23,8 @@
             "confirm": "Please repeat the index to confirm"
         },
         "arg_chain": {
-            "help": "The name of Ethereum PoS chain you are targeting. Use \"mainnet\" if you are depositing ETH",
-            "prompt": "Please choose the (mainnet or testnet) network/chain name"
+            "help": "The name of Ethereum PoS chain you are targeting. Use \"itxtestnet\" if you are depositing ETH",
+            "prompt": "Please choose the (itxtestnet or testnet) network/chain name"
         },
         "arg_fork": {
             "help": "The fork name of the fork you want to signing the message with.",

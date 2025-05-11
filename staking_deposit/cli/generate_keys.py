@@ -32,7 +32,7 @@ from staking_deposit.utils.intl import (
 )
 from staking_deposit.settings import (
     ALL_CHAINS,
-    MAINNET,
+    ITXTESTNET,
     get_chain_setting,
 )
 
@@ -70,7 +70,7 @@ def generate_keys_arguments_decorator(function: Callable[..., Any]) -> Callable[
                     list(ALL_CHAINS.keys())
                 ),
             ),
-            default=MAINNET,
+            default=ITXTESTNET,
             help=lambda: load_text(['chain', 'help'], func='generate_keys_arguments_decorator'),
             param_decls='--chain',
             prompt=choice_prompt_func(

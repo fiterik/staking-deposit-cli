@@ -5,7 +5,7 @@
             "prompt": "Scegli quanti validatori vuoi eseguire"
         },
         "chain": {
-            "help": "La versione desiderata della Ethereum PoS chain. Utilizzare \"mainnet\" se depositano ETH",
+            "help": "La versione desiderata della Ethereum PoS chain. Utilizzare \"itxtestnet\" se depositano ETH",
             "prompt": "Scegli il nome delle rete/catena (rete principale o di test)"
         },
         "keystore_password": {

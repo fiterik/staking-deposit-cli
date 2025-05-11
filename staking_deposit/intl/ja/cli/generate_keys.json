@@ -5,8 +5,8 @@
             "prompt": "実行したいバリデーターの数を選択してください"
         },
         "chain": {
-            "help": "ターゲットとしている Ethereum PoS のバージョン。ETH を入金する場合は \"mainnet\" を使用してください。",
-            "prompt": "(mainnet または testnet) ネットワーク/チェーン名を選択してください"
+            "help": "ターゲットとしている Ethereum PoS のバージョン。ETH を入金する場合は \"itxtestnet\" を使用してください。",
+            "prompt": "(itxtestnet または testnet) ネットワーク/チェーン名を選択してください"
         },
         "keystore_password": {
             "help": "キーを生成するために使用したニーモニック。 (この引数を使用せずにCLIからニーモニックの入力が求められるのを待つことをお勧めします。そうしないとシェル履歴に表示されます。)",

@@ -25,7 +25,7 @@ async def main(argv):
         'new-mnemonic',
         '--num_validators', '1',
         '--mnemonic_language', 'english',
-        '--chain', 'mainnet',
+        '--chain', 'itxtestnet',
         '--keystore_password', 'MyPassword',
         '--folder', my_folder_path,
     ]
