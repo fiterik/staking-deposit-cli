@@ -1,7 +1,7 @@
 from typing import Dict, NamedTuple
 from eth_utils import decode_hex
 
-DEPOSIT_CLI_VERSION = '3.0.0'
+DEPOSIT_CLI_VERSION = '3.0.2'
 
 
 class BaseChainSetting(NamedTuple):
@@ -13,7 +13,7 @@ ITXTESTNET = 'itxtestnet'
 
 ItxTestnetSetting = BaseChainSetting(
     NETWORK_NAME=ITXTESTNET, GENESIS_FORK_VERSION=bytes.fromhex('49545800'),
-    GENESIS_VALIDATORS_ROOT=bytes.fromhex('0'))
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('0000000000000000000000000000000000000000000000000000000000000000'))
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
     ITXTESTNET: ItxTestnetSetting,
