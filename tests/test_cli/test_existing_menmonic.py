@@ -23,7 +23,7 @@ def test_existing_mnemonic_bls_withdrawal() -> None:
     inputs = [
         'TREZOR',
         'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about',
-        '2', '2', '5', 'mainnet', 'MyPassword', 'MyPassword']
+        '2', '2', '5', 'itxtestnet', 'MyPassword', 'MyPassword']
     data = '\n'.join(inputs)
     arguments = [
         '--language', 'english',
@@ -67,7 +67,7 @@ def test_existing_mnemonic_eth1_address_withdrawal() -> None:
         'TREZOR',
         eth1_withdrawal_address,
         'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about',
-        '2', '2', '5', 'mainnet', 'MyPassword', 'MyPassword']
+        '2', '2', '5', 'itxtestnet', 'MyPassword', 'MyPassword']
     data = '\n'.join(inputs)
     arguments = [
         '--language', 'english',
@@ -125,7 +125,7 @@ def test_existing_mnemonic_eth1_address_withdrawal_bad_checksum() -> None:
         'TREZOR',
         correct_eth1_withdrawal_address, correct_eth1_withdrawal_address,
         'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about',
-        '2', '2', '5', 'mainnet', 'MyPassword', 'MyPassword'
+        '2', '2', '5', 'itxtestnet', 'MyPassword', 'MyPassword'
     ]
     data = '\n'.join(inputs)
     arguments = [
@@ -193,7 +193,7 @@ async def test_script() -> None:
         '--mnemonic="abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"',
         '--mnemonic-password', 'TREZOR',
         '--validator_start_index', '1',
-        '--chain', 'mainnet',
+        '--chain', 'itxtestnet',
         '--keystore_password', 'MyPassword',
         '--folder', my_folder_path,
     ]
@@ -240,7 +240,7 @@ async def test_script_abbreviated_mnemonic() -> None:
         '--mnemonic="aban aban aban aban aban aban aban aban aban aban aban abou"',
         '--mnemonic-password', 'TREZOR',
         '--validator_start_index', '1',
-        '--chain', 'mainnet',
+        '--chain', 'itxtestnet',
         '--keystore_password', 'MyPassword',
         '--folder', my_folder_path,
     ]

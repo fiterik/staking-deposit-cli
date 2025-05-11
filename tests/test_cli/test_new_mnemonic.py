@@ -33,7 +33,7 @@ def test_new_mnemonic_bls_withdrawal(monkeypatch) -> None:
         os.mkdir(my_folder_path)
 
     runner = CliRunner()
-    inputs = ['english', 'english', '1', 'mainnet', 'MyPassword', 'MyPassword',
+    inputs = ['english', 'english', '1', 'itxtestnet', 'MyPassword', 'MyPassword',
               'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about']
     data = '\n'.join(inputs)
     result = runner.invoke(cli, ['new-mnemonic', '--folder', my_folder_path], input=data)
@@ -74,7 +74,7 @@ def test_new_mnemonic_eth1_address_withdrawal(monkeypatch) -> None:
 
     runner = CliRunner()
     eth1_withdrawal_address = '0x00000000219ab540356cBB839Cbe05303d7705Fa'
-    inputs = [eth1_withdrawal_address, 'english', '1', 'mainnet', 'MyPassword', 'MyPassword',
+    inputs = [eth1_withdrawal_address, 'english', '1', 'itxtestnet', 'MyPassword', 'MyPassword',
               'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about']
     data = '\n'.join(inputs)
     arguments = [
@@ -135,7 +135,7 @@ def test_new_mnemonic_eth1_address_withdrawal_bad_checksum(monkeypatch) -> None:
     correct_eth1_withdrawal_address = '0x00000000219ab540356cBB839Cbe05303d7705Fa'
 
     inputs = [correct_eth1_withdrawal_address, correct_eth1_withdrawal_address,
-              'english', '1', 'mainnet', 'MyPassword', 'MyPassword',
+              'english', '1', 'itxtestnet', 'MyPassword', 'MyPassword',
               'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about']
     data = '\n'.join(inputs)
     arguments = [
@@ -191,7 +191,7 @@ def test_new_mnemonic_eth1_address_withdrawal_alias(monkeypatch) -> None:
 
     runner = CliRunner()
     execution_address = '0x00000000219ab540356cBB839Cbe05303d7705Fa'
-    inputs = [execution_address, 'english', '1', 'mainnet', 'MyPassword', 'MyPassword',
+    inputs = [execution_address, 'english', '1', 'itxtestnet', 'MyPassword', 'MyPassword',
               'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about']
     data = '\n'.join(inputs)
     arguments = [
@@ -247,7 +247,7 @@ def test_new_mnemonic_eth1_address_withdrawal_double_params(monkeypatch) -> None
 
     runner = CliRunner()
     execution_address = '0x00000000219ab540356cBB839Cbe05303d7705Fa'
-    inputs = [execution_address, 'english', '1', 'mainnet', 'MyPassword', 'MyPassword',
+    inputs = [execution_address, 'english', '1', 'itxtestnet', 'MyPassword', 'MyPassword',
               'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about']
     data = '\n'.join(inputs)
     arguments = [
@@ -289,7 +289,7 @@ async def test_script_bls_withdrawal() -> None:
         'new-mnemonic',
         '--num_validators', '5',
         '--mnemonic_language', 'english',
-        '--chain', 'mainnet',
+        '--chain', 'itxtestnet',
         '--keystore_password', 'MyPassword',
         '--folder', my_folder_path,
     ]
@@ -373,7 +373,7 @@ async def test_script_abbreviated_mnemonic() -> None:
         'new-mnemonic',
         '--num_validators', '5',
         '--mnemonic_language', 'english',
-        '--chain', 'mainnet',
+        '--chain', 'itxtestnet',
         '--keystore_password', 'MyPassword',
         '--folder', my_folder_path,
     ]

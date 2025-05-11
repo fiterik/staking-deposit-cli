@@ -1,7 +1,7 @@
 import pytest
 
 from staking_deposit.credentials import CredentialList
-from staking_deposit.settings import MainnetSetting
+from staking_deposit.settings import ItxTestnetSetting
 
 
 def test_from_mnemonic() -> None:
@@ -11,7 +11,7 @@ def test_from_mnemonic() -> None:
             mnemonic_password="",
             num_keys=1,
             amounts=[32, 32],
-            chain_setting=MainnetSetting,
+            chain_setting=ItxTestnetSetting,
             start_index=1,
             hex_eth1_withdrawal_address=None,
         )
