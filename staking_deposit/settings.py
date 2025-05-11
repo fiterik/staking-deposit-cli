@@ -13,7 +13,7 @@ ITXTESTNET = 'itxtestnet'
 
 ItxTestnetSetting = BaseChainSetting(
     NETWORK_NAME=ITXTESTNET, GENESIS_FORK_VERSION=bytes.fromhex('49545800'),
-    GENESIS_VALIDATORS_ROOT=bytes.fromhex('f27fbc33ae61765359121f8d798c746be341e67609aaf0699d24554acbee9509'))
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('0'))
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
     ITXTESTNET: ItxTestnetSetting,
