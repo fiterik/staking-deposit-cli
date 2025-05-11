@@ -1,7 +1,7 @@
 VENV_NAME?=venv
 VENV_ACTIVATE=. $(VENV_NAME)/bin/activate
 PYTHON=${VENV_NAME}/bin/python3.12
-VERSION=v1.1.0
+VERSION=v1.2.0
 DOCKER_IMAGE="0x6572696b/staking-deposit-cli"
 
 help:
